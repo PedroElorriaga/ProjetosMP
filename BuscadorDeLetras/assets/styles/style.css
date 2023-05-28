@@ -19,20 +19,25 @@ div {
 }
 
 .btn.btn-primary {
-    display: inline-block;
-    width: 100px;
-    padding: 0;
-    height: 30px;
-    margin-left: 20px;
-    align-items: center;
+    margin-left: 2em;
 }
-
-.input {
-    display: inline-block;
-    width: 150px;
-    height: 30px;
-}
-
-
-
 /* FEITO MUDANÇAS NO STYLE */
+
+.resultado {
+    text-align: center;
+    margin-top: 3em;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+    color: black;
+    margin-left: 6em;
+    margin-right: 6em;
+    font-weight: bold;
+    
+  }
+  
+  .resultado p {
+    margin-bottom: 15em;
+    padding: 35px;
+  }
+  
