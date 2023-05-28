@@ -6,6 +6,7 @@
     background: rgba(0, 255, 255, 0.288);
     border-radius: 5px;
     min-height: 300px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
 .content h1 {
@@ -18,7 +19,20 @@ div {
 }
 
 .btn.btn-primary {
-    margin-left: 2em;
-    
+    display: inline-block;
+    width: 100px;
+    padding: 0;
+    height: 30px;
+    margin-left: 20px;
+    align-items: center;
 }
+
+.input {
+    display: inline-block;
+    width: 150px;
+    height: 30px;
+}
+
+
+
 /* FEITO MUDANÇAS NO STYLE */
