@@ -1,18 +1,24 @@
 .content {
     margin: auto auto;
     height: auto;
-    width: 900px;
+    width: 800px;
     margin-top: 100px;
     background: rgba(0, 255, 255, 0.288);
     border-radius: 5px;
+    min-height: 300px;
 }
 
 .content h1 {
     text-align: center;
+    margin-top: 2em;
 }
 
 div {
     text-align: center;
 }
 
+.btn.btn-primary {
+    margin-left: 2em;
+    
+}
 /* FEITO MUDANÇAS NO STYLE */
