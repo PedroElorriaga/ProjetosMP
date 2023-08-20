@@ -3,9 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="../../public/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <title>Lista de tarefas</title>
 </head>
 <body>
     
+    <main>
+    
+        <form class="add-form">
+    <input type="text" placeholder="Adicionar tarefa" class="inputTarefa">
+    <button type="submit">+</button>
+</form>
+
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Tarefa</th>
+                    <th>Criada em</th>
+                    <th>Status</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Titulo da task</td>
+                    <td>20 de dezembro de 2023 14:00</td>
+                    <td>
+                    <select>
+                        <option value="Pendente">Pendente</option>
+                        <option value="Em andamento">Em andamento</option>
+                        <option value="Concluida">Concluida</option>
+                    </select>
+                    </td>
+                    <td>
+                        <button class="btn-action"><i class="fa-solid fa-pencil"></i></button>
+                        <button btn-action><i class="fa-solid fa-trash" style="color: #a80000;"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Titulo da task</td>
+                    <td>20 de dezembro de 2023 14:00</td>
+                    <td>
+                    <select>
+                        <option value="Pendente">Pendente</option>
+                        <option value="Em andamento">Em andamento</option>
+                        <option value="Concluida">Concluida</option>
+                    </select>
+                    </td>
+                    <td>
+                        <button class="btn-action"><i class="fa-solid fa-pencil"></i></button>
+                        <button btn-action><i class="fa-solid fa-trash" style="color: #a80000;"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Titulo da task</td>
+                    <td>20 de dezembro de 2023 14:00</td>
+                    <td>
+                    <select>
+                        <option value="Pendente">Pendente</option>
+                        <option value="Em andamento">Em andamento</option>
+                        <option value="Concluida">Concluida</option>
+                    </select>
+                    </td>
+                    <td>
+                        <button class="btn-action"><i class="fa-solid fa-pencil"></i></button>
+                        <button btn-action><i class="fa-solid fa-trash" style="color: #a80000;"></i></button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Titulo da task</td>
+                    <td>20 de dezembro de 2023 14:00</td>
+                    <td>
+                    <select>
+                        <option value="Pendente">Pendente</option>
+                        <option value="Em andamento">Em andamento</option>
+                        <option value="Concluida">Concluida</option>
+                    </select>
+                    </td>
+                    <td>
+                        <button class="btn-action"><i class="fa-solid fa-pencil"></i></button>
+                        <button btn-action><i class="fa-solid fa-trash" style="color: #a80000;"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+
 </body>
 </html>
