@@ -2,7 +2,7 @@ const express = require('express');
 const http = express.Router();
 
 http.get('/', (req, res) => {
-    res.send('Hello world!')
+    res.render('index');
 });
 
 module.exports = http;
