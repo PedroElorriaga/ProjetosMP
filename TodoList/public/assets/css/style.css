@@ -19,7 +19,7 @@ main {
     left: 390px;
     background-color: white;
     padding: 20px;
-    height: 550px;
+    height: max-content;
     width: 60%;
     border-radius: 15px;
     margin: 40px auto;
@@ -81,10 +81,11 @@ select {
     padding: 10px;
     font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
+    border-radius: 8px;
     width: 200px; /* Personalize a largura conforme necessário */
     border-radius: 10px;
+    background-color: #ebebeb;
+    text-transform: capitalize;
   }
   
   /* Estilo para as opções dentro do seletor */
@@ -97,12 +98,33 @@ select {
   
   /* Estilo quando hover */
   select:hover {
-    border-color: #007bff; /* Cor do contorno quando hover */
-  }
+    background-color: #DDD;
+}
   
   /* Estilo quando hover nas opções */
   select option:hover {
     background-color: #007bff; /* Cor de fundo das opções quando hover */
     color: #fff; /* Cor do texto das opções quando hover */
-  }
+}
+
+.btn-action {
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: #FFF;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.btn-action:nth-child(1) {
+    background-color: orange;
+    margin-right: 5px;
+}
+  
+.btn-action:nth-child(2) {
+    background-color: rgba(237, 42, 42, 0.9);
+}
   
