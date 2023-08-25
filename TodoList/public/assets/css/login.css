@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Urbanist', sans-serif;
+}
+
+
+body {
+    background-color: #00173a;
+}
+
+main {
+    background-color: #fff;
+    border-radius: 8px; 
+    padding: 20px;
+    height: 350px;
+    width: 20%;
+    margin: 40px auto;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3; /* Uma cor ligeiramente mais escura quando o botão é hover */
+}
+
+.btn  {
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
+}
+
+a {
+    color:  #0056b3;
+    font-weight: bold;
+    text-decoration: none;
+
+}
+
+label {
+    font-size: 17px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}

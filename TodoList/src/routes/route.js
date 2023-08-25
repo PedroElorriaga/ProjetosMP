@@ -5,4 +5,10 @@ http.get('/', (req, res) => {
     res.render('index');
 });
 
+
+http.get('/login', (req, res) => {
+    res.render('includes/login');
+});
+
+
 module.exports = http;
