@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,14 +8,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <title>Lista de tarefas</title>
 </head>
+
 <body>
-    
+
     <main>
-    
+
         <form class="add-form">
-        <input type="text" placeholder="Adicionar tarefa" class="inputTarefa">
-        <button type="submit">+</button>
-    </form>
+            <input type="text" placeholder="Adicionar tarefa" class="inputTarefa">
+            <button type="submit">+</button>
+        </form>
 
         <table>
             <thead>
@@ -31,53 +33,21 @@
                     <td>Titulo da task</td>
                     <td>20 de dezembro de 2023 14:00</td>
                     <td>
-                    <select>
-                        <option value="Pendente">Baixa</option>
-                        <option value="Em andamento">Média</option>
-                        <option value="Concluida">Alta</option>
-                    </select>
+                        <select class="prioriadade-select">
+                            <option value="Pendente">Baixa</option>
+                            <option value="Em andamento">Média</option>
+                            <option value="Concluida">Alta</option>
+                        </select>
                     </td>
                     <td>
-                        <button class="btn-action" id="atualizar"><i class="fa-solid fa-pencil"></i></button>
-                        <button class="btn-action" id="delete"><i class="fa-solid fa-trash"></i></button>
+                        <button class="btn-action" class="atualizar"><i class="fa-solid fa-pencil"></i></button>
+                        <button class="btn-action" class="delete"><i class="fa-solid fa-trash"></i></button>
                     </td>
-                </tr>
-                <tr>
-                    <td>Titulo da task</td>
-                    <td>20 de dezembro de 2023 14:00</td>
-                    <td>
-                    <select>
-                        <option value="Pendente">Baixa</option>
-                        <option value="Em andamento">Média</option>
-                        <option value="Concluida">Alta</option>
-                    </select>
-                    </td>
-                    <td>
-                        <button class="btn-action" id="atualizar"><i class="fa-solid fa-pencil"></i></button>
-                        <button class="btn-action" id="delete"><i class="fa-solid fa-trash"></i></button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Titulo da task</td>
-                    <td>20 de dezembro de 2023 14:00</td>
-                    <td>
-                    <select>
-                        <option value="Pendente">Baixa</option>
-                        <option value="Em andamento">Média</option>
-                        <option value="Concluida">Alta</option>
-                    </select>
-                    </td>
-                    <td>
-                        <button class="btn-action" id="atualizar"><i class="fa-solid fa-pencil"></i></button>
-                        <button class="btn-action" id="delete"><i class="fa-solid fa-trash"></i></button>
-                    </td>
-                </tr>
-                <tr>
-                 
             </tbody>
         </table>
     </main>
 
-    
+
 </body>
+
 </html>

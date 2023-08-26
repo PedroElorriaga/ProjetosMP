@@ -14,7 +14,7 @@ main {
     background-color: #fff;
     border-radius: 8px; 
     padding: 20px;
-    height: 350px;
+    height: max-content;
     width: 20%;
     margin: 40px auto;
     margin-left: auto;

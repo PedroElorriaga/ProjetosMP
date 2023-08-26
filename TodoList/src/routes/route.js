@@ -1,14 +1,12 @@
 const express = require('express');
-const http = express.Router();
+const route = express.Router();
+const taskController = require('../controllers/taskController');
+const loginController = require('../controllers/loginController');
 
-http.get('/', (req, res) => {
-    res.render('index');
-});
+// TASK ENDPOINT
+route.get('/tarefas', taskController.tasksUser);
 
+route.get('/login', loginController.loginUser);
+route.get('/cadastro', loginController.cadastroUser);
 
-http.get('/login', (req, res) => {
-    res.render('includes/login');
-});
-
-
-module.exports = http;
+module.exports = route;
