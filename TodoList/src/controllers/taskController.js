@@ -1,3 +1,6 @@
-exports.tasksUser = (req, res) => {
+const taskModel = require('../models/taskModel');
+
+exports.testeConnect = async(req, res) => {
     res.render('index');
 };
+

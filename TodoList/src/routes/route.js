@@ -5,9 +5,9 @@ const loginController = require('../controllers/loginController');
 const homeController = require('../controllers/homeController');
 
 // TASK ENDPOINT
-route.get('/tarefas', taskController.tasksUser);
+route.get('/tarefas', taskController.testeConnect);
 route.get('/login', loginController.loginUser);
 route.get('/cadastro', loginController.cadastroUser);
-route.get('/home', homeController.homeUser);
+route.get('/', homeController.homeUser);
 
 module.exports = route;
