@@ -1,19 +1,9 @@
-const { MongoClient } = require('mongodb');
-require('dotenv').config();
+const { mongoose, Schema, mongo} = require('mongoose');
 
-console.log(process.env.DATABASE_PASSWORD)
+const tasksSchema = new Schema({
+    titulo: {type: String, required: true},
+    prioridade: {type: String, default: "Baixa"},
+    created_at: {type: Date, default: Date.now()}
+});
 
-const url = `mongodb+srv://MatheusPedro:${process.env.DATABASE_PASSWORD}@todolistmp.167kbrb.mongodb.net/?retryWrites=true&w=majority`;
-const cliente = new MongoClient(url);
-
-const conectar = async () => {
-    await cliente.connect();
-    const teste = 'Servidor conectado com sucesso!';
-
-    return teste;
-};
-
-
-module.exports = {
-    conectar
-};
+const TaskModel = mongoose.model('Tarefas', tasksSchema);

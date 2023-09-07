@@ -1,6 +1,9 @@
 const taskModel = require('../models/taskModel');
 
-exports.testeConnect = async(req, res) => {
+exports.showTasks = async (req, res) => {
     res.render('index');
 };
 
+exports.createTask = (req, res) => {
+    res.json({ "Status": "Ok" });
+};

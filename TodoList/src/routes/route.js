@@ -3,9 +3,13 @@ const route = express.Router();
 const taskController = require('../controllers/taskController');
 const loginController = require('../controllers/loginController');
 const homeController = require('../controllers/homeController');
+const taskMiddleware = require('../middlewares/taskModdleware');
+
 
 // TASK ENDPOINT
-route.get('/tarefas', taskController.testeConnect);
+route.get('/tarefas', taskController.showTasks);
+route.post('/tarefas/registrar', taskMiddleware.verificaEnvio, taskController.createTask);
+
 route.get('/login', loginController.loginUser);
 route.get('/cadastro', loginController.cadastroUser);
 route.get('/', homeController.homeUser);
