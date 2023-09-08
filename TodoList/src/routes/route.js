@@ -7,7 +7,8 @@ const taskMiddleware = require('../middlewares/taskModdleware');
 
 
 // TASK ENDPOINT
-route.get('/tarefas', taskController.showTasks);
+route.get('/tarefas', taskController.tarefas);
+route.get('/tarefas/get-tasks', taskController.showTasks);
 route.post('/tarefas/registrar', taskMiddleware.verificaEnvio, taskController.createTask);
 
 route.get('/login', loginController.loginUser);

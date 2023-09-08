@@ -1,9 +1,15 @@
 const taskModel = require('../models/taskModel');
 
+exports.tarefas = (req, res) => {
+    res.render('index')
+}
+
 exports.showTasks = async (req, res) => {
-    res.render('index');
+    const retorno = await taskModel.pegaTarefasModel();
+    return res.json(retorno);
 };
 
-exports.createTask = (req, res) => {
-    res.json({ "Status": "Ok" });
+exports.createTask = async (req, res) => {
+    const retorno = await taskModel.criarTarefaModel(req.body);
+    return res.redirect('/tarefas');
 };
