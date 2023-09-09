@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #007bff;
+            --background-color: #24252a;
+            --text-color: #fff;
+            --link-color: #007bff;
+            --link-hover-color: #b41f05;
+            --link-hover-color-2: #014186;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #00173a;
+            margin: 0;
+        }
+
+        header {
+            background-color:  #171717;
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+            color: var(--text-color);
+        }
+
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo img {
+            height: 55px;
+            margin-left: 50px;
+        }
+
+        .nav-list ul {
+            list-style: none;
+            display: flex;
+            font-size: 1.3rem; 
+            margin-right: 1200px;
+        }
+
+        .nav-item {
+            margin-right: 20px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-color);
+            font-weight: 500;
+            transition: color 0.4s ease;
+        }
+
+        .nav-link:hover {
+            color: var(--link-color);
+        }
+
+        .btn-historico button {
+            border: none;
+            background-color: var(--link-color); 
+            color: var(--text-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-right: 15px;
+        }
+
+        .btn-historico button:hover {
+            background-color: var(--link-hover-color-2);
+        }
+
+        .login-button button {
+            border: none;
+            background-color: #b41f05; 
+            color: var(--text-color);
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin-right: 25px;
+        }
+
+        .login-button button:hover {
+            background-color: #8c1503; 
+        }
+
+        .nav-icons {
+            display: flex;
+            align-items: center;
+            
+        }
+
+        .nav-icons i {
+            font-size: 20px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="img/logo.png" alt="Logo">
+                </a>
+            </div>
+
+            <div class="nav-list">
+                <ul>
+                    <li class="nav-item"><a href="index.html" class="nav-link">Início</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Contato</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-icons">
+                <a href="#" class="btn-historico">
+                    <button><i class="fas fa-history"></i> HISTÓRICO</button>
+                </a>
+                <a href="anunciar.html" class="login-button">
+                    <button><i class="fas fa-sign-out-alt"></i> SAIR</button>
+                </a>
+            </div>
+        </nav>
+    </header>
+</body>
+
+</html>

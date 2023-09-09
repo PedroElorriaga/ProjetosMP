@@ -8,6 +8,6 @@ const homeController = require('../controllers/homeController');
 route.get('/tarefas', taskController.tasksUser);
 route.get('/login', loginController.loginUser);
 route.get('/cadastro', loginController.cadastroUser);
-route.get('/home', homeController.homeUser);
+route.get('/', homeController.homeUser);
 
 module.exports = route;

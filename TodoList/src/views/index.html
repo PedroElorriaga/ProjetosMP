@@ -14,8 +14,8 @@
     <main>
 
         <form class="add-form">
-            <input type="text" placeholder="Adicionar tarefa" class="inputTarefa">
-            <button type="submit">+</button>
+            <input id="txt_tarefa" type="text" placeholder="Adicionar tarefa" class="inputTarefa">
+            <button onclick="adicionarTarefa()" type="button">+</button>
         </form>
 
         <table>
@@ -30,8 +30,8 @@
 
             <tbody>
                 <tr>
-                    <td>Titulo da task</td>
-                    <td>20 de dezembro de 2023 14:00</td>
+                    <td id="idDoElemento"></td>
+                    <td></td>
                     <td>
                         <select class="prioriadade-select">
                             <option value="Pendente">Baixa</option>
@@ -40,13 +40,13 @@
                         </select>
                     </td>
                     <td>
-                        <button class="btn-action" class="atualizar"><i class="fa-solid fa-pencil"></i></button>
-                        <button class="btn-action" class="delete"><i class="fa-solid fa-trash"></i></button>
+                        <button class="btn-action atualizar"><i class="fa-solid fa-pencil"></i></button>
+                        <button class="btn-action delete"><i class="fa-solid fa-trash"></i></button>
                     </td>
+                </tr>
             </tbody>
         </table>
     </main>
-
 
 </body>
 

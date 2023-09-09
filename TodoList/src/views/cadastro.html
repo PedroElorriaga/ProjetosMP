@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
     <link rel="stylesheet" href="assets/css/login.css">
     <title>login</title>
 </head>
@@ -15,13 +17,18 @@
 
     <main>
         <div class="form">
-            <label for="usuario">Usúario: </label>
-            <input type="text" placeholder="Digite seu usuário"> <br>
-            <label for="senha">Senha: </label>
-            <input type="password" placeholder="Digite sua senha"> <br>
-            <label for="senha-repeat">Repita a senha: </label>
-            <input type="password" placeholder="Digite sua senha"> <br><br>
-            <button class="btn btn-primary">CADASTRAR</button>
+            <label for="txt_nome">Nome:</label>
+            <input type="text" id="txt_nome" placeholder="Digite seu nome:"> <br>
+
+            <label for="txt_usuario">Usuário:</label>
+            <input type="text" id="txt_usuario" placeholder="Digite seu usuario:"> <br>
+
+            <label for="txt_senha">Senha:</label>
+            <input type="password" id="txt_senha" placeholder="Digite sua senha:"> <br>
+
+            <label for="txt_senha_confirm">Confirme a senha:</label>
+            <input type="password" id="txt_senha_confirm" placeholder="Digite sua senha:"> <br> <br>
+            <button onclick="cadastrar()" class="btn btn-primary">Cadastrar</button>
         </div>
         <br>
         <p>JÁ POSSUI UMA CONTA? <a href="/login">ENTRAR</a></p>
@@ -29,3 +36,4 @@
 </body>
 
 </html>
+
