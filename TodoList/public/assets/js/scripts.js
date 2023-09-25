@@ -1,10 +1,19 @@
-const fetchDados = async () => {
-    const apiTasks = await fetch('http://localhost:3000/tarefas/get-tasks');
-    const tasksJson = await apiTasks.json();
-    
-    return tasksJson;
+const verificaLogin = () => {
+    const emailLabel = document.querySelector('.txt_usuario');
+    const passwordLabel = document.querySelector('.txt_senha');
+
+    verificaCampoVazio(emailLabel.value, passwordLabel.value);
 }
 
-const dadosTasks = fetchDados();
+const mensagemDeErro = (msg) => {
+    let msgError = document.querySelector('.error_msg');
+    msgError.innerHTML = msg;
+    msgError.removeAttribute('hidden');
+}
 
-console.log(dadosTasks);
+const verificaCampoVazio = (...inputs) => {
+    const arrayDeInputs = [...inputs];
+    arrayDeInputs.map((x) => {
+        console.log(x);
+    })
+}

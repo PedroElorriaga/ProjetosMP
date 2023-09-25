@@ -12,21 +12,21 @@
 </head>
 
 <body>
-
-
     <main>
         <div class="form">
+            <p class="error_msg" hidden></p>
             <label for="usuario">Usúario: </label>
-            <input type="text" placeholder="Digite seu usuário" id="txt_usuario"> <br>
+            <input type="text" placeholder="Digite seu usuário" id="txt_usuario" class="txt_usuario"> <br>
+            <p class="error_msg" hidden></p>
             <label for="senha">Senha: </label>
-            <input type="password" placeholder="Digite sua senha" id="txt_senha"> <br><br>
-            <button onclick="login()" class="btn btn-primary">ENTRAR</button>
+            <input type="password" placeholder="Digite sua senha" id="txt_senha" class="txt_senha"> <br><br>
+            <button onclick="verificaLogin()" class="btn btn-primary">ENTRAR</button>
         </div>
         <br>
         <p>Não possui conta? <a href="/cadastro">CADASTRE-SE</a></p>
     </main>
 </body>
 
+<script src="assets/js/scripts.js"></script>
+
 </html>
-
-
