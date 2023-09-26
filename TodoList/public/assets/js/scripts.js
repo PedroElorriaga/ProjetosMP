@@ -1,19 +1,32 @@
-const verificaLogin = () => {
-    const emailLabel = document.querySelector('.txt_usuario');
-    const passwordLabel = document.querySelector('.txt_senha');
+const showMessage = 'show-message';
+const emailLabel = document.querySelector('.txt_usuario');
+const passwordLabel = document.querySelector('.txt_senha');
+const form = document.querySelector('.form');
 
-    verificaCampoVazio(emailLabel.value, passwordLabel.value);
+const verificaLogin = () => {
+    limparErros(form);
+    verificaCampoVazio(emailLabel, passwordLabel);
 }
 
-const mensagemDeErro = (msg) => {
-    let msgError = document.querySelector('.error_msg');
-    msgError.innerHTML = msg;
-    msgError.removeAttribute('hidden');
+const limparErros = () => {
+    form.querySelectorAll('.' + showMessage).forEach((error) => {
+        error.classList.remove(showMessage);
+    });
+}
+
+const mensagemDeErro = (input, msg) => {
+    const formField = input.parentElement;
+    const errorMessages = formField.querySelector('.error-message')
+    errorMessages.innerHTML = msg;
+    errorMessages.classList.add(showMessage);
 }
 
 const verificaCampoVazio = (...inputs) => {
     const arrayDeInputs = [...inputs];
     arrayDeInputs.map((x) => {
-        console.log(x);
-    })
+        if (!x.value) {
+            return mensagemDeErro(x, `O campo ${x.name} não pode estar vázio`)
+        }
+        return true
+    });
 }
