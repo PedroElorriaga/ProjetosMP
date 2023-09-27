@@ -3,10 +3,16 @@ const emailLabel = document.querySelector('.txt_usuario');
 const passwordLabel = document.querySelector('.txt_senha');
 const form = document.querySelector('.form');
 
-const verificaLogin = () => {
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
     limparErros(form);
-    verificaCampoVazio(emailLabel, passwordLabel);
-}
+
+    console.log(verificaCampoVazio(emailLabel, passwordLabel));
+
+    if (!verificaCampoVazio(emailLabel, passwordLabel)) {
+        form.submit();
+    }
+})
 
 const limparErros = () => {
     form.querySelectorAll('.' + showMessage).forEach((error) => {
@@ -25,8 +31,9 @@ const verificaCampoVazio = (...inputs) => {
     const arrayDeInputs = [...inputs];
     arrayDeInputs.map((x) => {
         if (!x.value) {
-            return mensagemDeErro(x, `O campo ${x.name} não pode estar vázio`)
+            mensagemDeErro(x, `O campo ${x.name} não pode estar vázio`);
+            return false;
         }
-        return true
     });
+    return true;
 }

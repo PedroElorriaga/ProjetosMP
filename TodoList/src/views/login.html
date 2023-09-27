@@ -13,7 +13,7 @@
 
 <body>
     <main>
-        <div class="form">
+        <form method="post" class="form">
             <div class="forms-field">
                 <span class="error-message">Campo inválido</span>
                 <label for="usuario">Usúario</label>
@@ -26,8 +26,8 @@
                 <input type="password" placeholder="Digite sua senha" id="txt_senha" class="txt_senha" name="Senha">
                 <br>
             </div>
-            <button onclick="verificaLogin()" class="btn btn-primary">ENTRAR</button>
-        </div>
+            <button type="submit" class="btn btn-primary">ENTRAR</button>
+        </form>
         <br>
         <p>Não possui conta? <a href="/cadastro">CADASTRE-SE</a></p>
     </main>
