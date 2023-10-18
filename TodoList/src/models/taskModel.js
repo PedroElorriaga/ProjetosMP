@@ -3,7 +3,7 @@ const { mongoose, Schema, mongo } = require('mongoose');
 
 const tasksSchema = new Schema({
     titulo: { type: String, required: true },
-    prioridade: { type: String, default: "Baixa" },
+    prioridade: { type: String, default: "Média" },
     created_at: { type: Date, default: new Date(Date.now()).toLocaleString() }
 });
 
@@ -17,6 +17,12 @@ const criarTarefaModel = async (task) => {
     return conexao;
 };
 
+const atualizarTask = async (id, change) => {
+    const conexao = await TaskModel.findByIdAndUpdate({ _id: id }, { prioridade: change.prioridade });
+
+    return conexao;
+};
+
 const pegaTarefasModel = async () => {
     const conexao = await TaskModel.find({});
 
@@ -25,10 +31,6 @@ const pegaTarefasModel = async () => {
 
 const deleteTarefas = async (id) => {
     try {
-        if (typeof id !== 'string') {
-            return;
-        }
-
         if (!id) {
             return false;
         }
@@ -46,4 +48,5 @@ module.exports = {
     criarTarefaModel,
     pegaTarefasModel,
     deleteTarefas,
+    atualizarTask,
 };

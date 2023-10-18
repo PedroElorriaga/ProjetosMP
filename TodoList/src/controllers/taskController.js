@@ -1,40 +1,45 @@
 const taskModel = require('../models/taskModel');
 
 exports.tarefas = (req, res) => {
-    res.render('tarefas')
-}
+    res.render('tarefas');
+};
 
 exports.showTasks = async (req, res) => {
     try {
         const retorno = await taskModel.pegaTarefasModel();
         return res.json(retorno);
     } catch (e) {
-        return res.status(401).json({ ERRO: ['ERRO' + e]});
+        return res.status(401).json({ erro: e.errors });
     }
 };
 
 exports.createTask = async (req, res) => {
-    const retorno = await taskModel.criarTarefaModel(req.body);
-    return res.redirect('/tarefas');
+    try {
+        const retorno = await taskModel.criarTarefaModel(req.body);
+        return res.redirect('/tarefas');
+    } catch (e) {
+        return res.json({ erro: e.errors });
+    }
+
 };
 
 exports.deleteTask = async (req, res) => {
     try {
-        if (!req.params.id) {
-            return res.status(401).json({ erro: ['Missing ID'] });
-        }
-    
         const retorno = await taskModel.deleteTarefas(req.params.id);
-        console.log(retorno)
-    
-        if (!retorno) {
-            return res.status(401).json({ erro: ['Usuário não existe'] });
-        }
-    
-        const { titulo, prioridade } = retorno;
-    
-        return res.status(200).json({ titulo, prioridade, status: ['Deletado com sucesso!'] });
+
+        return res.redirect('/tarefas');
     } catch (e) {
-        return res.status(400).json({ erro: ['Error']})
+        return res.json({ erro: e.errors });
     }
-}
+};
+
+exports.updateTask = async (req, res) => {
+    try {
+        console.log(req.params.id, req.body)
+        const retorno = await taskModel.atualizarTask(req.params.id, req.body);
+
+        return res.json(retorno);
+    } catch (e) {
+        return res.json({ erro: e.errors });
+    }
+};
